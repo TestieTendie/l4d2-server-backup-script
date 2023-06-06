@@ -96,7 +96,7 @@ ExecStart=/home/<username>/l4d2-server-backup.sh
 [Install]
 WantedBy=default.target
 ```
-**Make sure to replace <username> with your account's username**
+#### Make sure to replace `<username>` with your account's username
 
 2. Create a new timer file (`l4d2-server-backup.timer`) in `~/.config/systemd/user`:
 
