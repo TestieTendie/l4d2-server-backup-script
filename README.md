@@ -15,7 +15,7 @@ The purpose of this script is to create a backup of important files/folders on y
 - [github-cli](https://archlinux.org/packages/extra/x86_64/github-cli/) configured to [cache your credentials via HTTPS](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git), or use SSH
 - SFTP access to your remote server
 - Your remote server does not allow SSHing/SSH key authentication for SFTP (if it does, adjust accordingly to mitigate security risks).
-
+- Connect to your remote server using SFTP manually at least once and accept the key fingerprint.
 ​
     
 <h2 align="center">Usage</h2>
@@ -127,6 +127,26 @@ This will start the service immediately and program it to start on every boot.
 ```
 systemctl --user enable --now l4d2-server-backup.timer
 ```
+​
+Sure, here's a section you can add to the instructions:
+
+<h3 align="center">Important Reminder</h3>
+
+Before you deploy the scheduled job for the first time, it's important that you connect to your remote server manually using SFTP at least once and accept the key fingerprint.
+
+When you connect to your server for the first time using SFTP, you'll be prompted to accept the key fingerprint. By accepting the key fingerprint, you're verifying that you trust the server and allowing your SFTP client to establish the connection.
+
+If you don't accept the key fingerprint manually before deploying the scheduled job, the script will fail to connect to the remote server when it runs, and the backups won't be created.
+
+To connect manually using SFTP, you can use the following command in your terminal:
+
+```
+sftp user@server_ip
+```
+
+Replace `user` with your remote server username and `server_ip` with your remote server's IP address. After running the command, you'll be prompted to enter your password and accept the key fingerprint.
+
+Once you've connected to the remote server and accepted the key fingerprint, you can go ahead and deploy the scheduled job as detailed above.
 ​
 
 <h2 align="center">Known Issues/Risks</h2>
