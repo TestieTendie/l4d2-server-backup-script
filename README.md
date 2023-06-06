@@ -128,7 +128,6 @@ This will start the service immediately and program it to start on every boot.
 systemctl --user enable --now l4d2-server-backup.timer
 ```
 ​
-Sure, here's a section you can add to the instructions:
 
 <h3 align="center">Important Reminder</h3>
 
