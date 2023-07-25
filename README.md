@@ -163,6 +163,7 @@ This approach offers a technique to automatically create backups of your Left 4 
 <h2 align="center">Reasons to NOT do it this way</h2>
 
 The reader should be aware that this approach may not be suitable for all scenarios, and they should review their provider's policies and practices to determine the most appropriate method for their needs.
+Git is not a backup tool but a code version control system, using it as a backup tool/service might present unexpected issues that the reader assumes responsibility over.
 ​
 
 <h2 align="center">License</h2>
